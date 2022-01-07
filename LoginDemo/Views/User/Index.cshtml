@@ -1,0 +1,19 @@
+﻿@model LoginDemo.Models.User
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Logga in</h2>
+
+
+@using (Html.BeginForm())
+{
+    <div>Användarnamn</div>
+    <div>@Html.TextBoxFor(m => m.Username) </div>
+    <div>Lösenord</div>
+    <div>@Html.PasswordFor(m =>m.Password)</div>
+    <input type="submit" value="Logga in" />
+    <div>
+        @Html.ValidationSummary();
+    </div>
+}
